@@ -20,5 +20,57 @@
             "output_response": "System initialized successfully"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "0e5594a5-87bf-4a7c-ad6e-7b801390d9a8",
+        "timestamp": "2026-01-06T19:37:10.241365",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "455f4a9d-99c7-4508-b18e-d38996c1707a",
+        "timestamp": "2026-01-06T19:51:25.257966",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f850aa60-e736-4e0b-a19e-8bb7f1acf766",
+        "timestamp": "2026-01-06T19:59:18.959249",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a41f8dfb-6cb8-46e3-aa3a-41ac9c6a0f95",
+        "timestamp": "2026-01-06T19:59:18.959249",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox/test",
+            "input_prompt": "Analyze the file: sandbox/test",
+            "output_response": "Basic analysis: file received successfully."
+        },
+        "status": "SUCCESS"
     }
 ]

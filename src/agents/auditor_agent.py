@@ -1,5 +1,3 @@
-# src/agents/auditor_agent.py
-
 from src.utils.file_tools import read_file
 from src.utils.logger import log_experiment, ActionType
 
@@ -7,8 +5,7 @@ from src.utils.logger import log_experiment, ActionType
 def run_auditor(file_path: str) -> dict:
     code = read_file(file_path)
 
-    input_prompt = f"Analyse du fichier {file_path}"
-    output_response = {
+    analysis_result = {
         "issues": [
             "Analyse fictive : bugs potentiels",
             "Analyse fictive : style à améliorer"
@@ -16,10 +13,14 @@ def run_auditor(file_path: str) -> dict:
     }
 
     log_experiment(
+        agent_name="Auditor",
+        model_used="N/A",
         action=ActionType.ANALYSIS,
-        input_prompt=input_prompt,
-        output_response=output_response,
-        status="success"
+        details={
+            "input_prompt": f"Analyse du fichier {file_path}",
+            "output_response": analysis_result
+        },
+        status="SUCCESS"
     )
 
-    return output_response
+    return analysis_result

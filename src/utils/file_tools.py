@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-# Dossier autorisé pour l'écriture
+# Dossier autorisé
 SANDBOX_DIR = Path("sandbox").resolve()
 
 
@@ -19,12 +19,10 @@ def _is_safe_path(target_path: Path) -> bool:
 def read_file(file_path: str) -> str:
     """
     Lit le contenu d'un fichier texte en toute sécurité.
-
-    Règles :
-    - Pas de chemin absolu
-    - Pas de '..'
-    - Lecture autorisée uniquement si le fichier existe
     """
+
+    if not isinstance(file_path, str):
+        raise ValueError("file_path must be a string")
 
     path = Path(file_path)
 
@@ -34,24 +32,30 @@ def read_file(file_path: str) -> str:
     if ".." in path.parts:
         raise PermissionError("Remontée de dossier interdite ('..').")
 
-    if not path.exists():
+    full_path = path.resolve()
+
+    if not _is_safe_path(full_path):
+        raise PermissionError("Lecture autorisée uniquement dans le dossier sandbox.")
+
+    if not full_path.exists():
         raise FileNotFoundError(f"Fichier introuvable : {file_path}")
 
-    if not path.is_file():
+    if not full_path.is_file():
         raise ValueError("Le chemin fourni n'est pas un fichier.")
 
-    return path.read_text(encoding="utf-8")
+    return full_path.read_text(encoding="utf-8")
 
 
 def write_file(file_path: str, content: str) -> None:
     """
     Écrit du contenu texte dans un fichier, UNIQUEMENT dans sandbox/.
-
-    Règles ABSOLUES :
-    - Écriture autorisée UNIQUEMENT dans sandbox/
-    - Chemins absolus interdits
-    - '..' interdit
     """
+
+    if not isinstance(file_path, str):
+        raise ValueError("file_path must be a string")
+
+    if not isinstance(content, str):
+        raise ValueError("content must be a string")
 
     path = Path(file_path)
 
@@ -66,7 +70,17 @@ def write_file(file_path: str, content: str) -> None:
     if not _is_safe_path(full_path):
         raise PermissionError("Écriture autorisée uniquement dans le dossier sandbox.")
 
-    # Créer les dossiers parents si nécessaires
     full_path.parent.mkdir(parents=True, exist_ok=True)
-
     full_path.write_text(content, encoding="utf-8")
+
+
+def write_files(files: dict[str, str]) -> None:
+    """
+    Écrit plusieurs fichiers dans sandbox/.
+    """
+
+    if not isinstance(files, dict):
+        raise ValueError("files must be a dictionary")
+
+    for path, content in files.items():
+        write_file(path, content)

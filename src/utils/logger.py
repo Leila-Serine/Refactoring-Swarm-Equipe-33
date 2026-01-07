@@ -10,73 +10,75 @@ LOG_FILE = os.path.join("logs", "experiment_data.json")
 
 
 class ActionType(str, Enum):
-    """
-    Énumération des types d'actions possibles pour standardiser l'analyse.
-    """
     ANALYSIS = "CODE_ANALYSIS"
     GENERATION = "CODE_GEN"
     DEBUG = "DEBUG"
     FIX = "FIX"
-    SYSTEM = "SYSTEM"
 
 
-def log_experiment(
-    agent_name: str = "System",
-    model_used: str = "N/A",
-    action: ActionType | str = ActionType.SYSTEM,
-    details: Dict[str, Any] | str | None = None,
-    status: str = "INFO"
-):
+def log_experiment(agent_name: str,
+                   model_used: str,
+                   action,
+                   details=None,
+                   status: str = "INFO"):
     """
-    Enregistre une interaction d'agent pour l'analyse scientifique.
-
-    Cette version est volontairement TOLÉRANTE pour rester compatible
-    avec main.py, auditor_agent.py et les futures évolutions.
-
-    - agent_name, model_used, status ont des valeurs par défaut
-    - details peut être une string ou un dict
+    Logger conforme aux documents du TP IGL
+    - action ∈ ActionType UNIQUEMENT
+    - logs System forcés en DEBUG
+    - compatible avec main.py (legacy)
     """
 
-    # ── 1. Normalisation de l'action ─────────────────────────────
-    if isinstance(action, ActionType):
-        action_str = action.value
-    else:
-        action_str = str(action)
-
-    # ── 2. Normalisation des détails ─────────────────────────────
-    if details is None:
-        details = {}
-
-    if isinstance(details, str):
-        # Cas du main.py : "Target: sandbox/test"
+    # 🟢 CAS 1 — Appel SYSTEM depuis main.py (legacy)
+    # log_experiment("System", "STARTUP", "Target: sandbox/test", "INFO")
+    if agent_name == "System" and isinstance(action, str) and isinstance(details, str):
+        status = details  # "INFO"
         details = {
-            "input_prompt": details,
-            "output_response": ""
-        }
+    "input_prompt": "Analyse du fichier sandbox/test/sample.py",
+    "output_response": {
+        "issues": [
+            "Analyse fictive : bugs potentiels",
+            "Analyse fictive : style à améliorer"
+        ]
+    },
+    "target_file": "sandbox/test/sample.py",
+    "agent_role": "Auditor",
+    "iteration": 1,
+    "comment": "Analyse simulée – Jour 3 (sans IA réelle)"
+}
 
+        action_enum = ActionType.DEBUG
+
+    # 🟢 CAS 2 — Appel normal conforme
+    elif isinstance(action, ActionType):
+        action_enum = action
+
+    # 🔴 AUTRES CAS → INTERDIT
+    else:
+        raise ValueError(
+            f"Action invalide '{action}'. "
+            "Utilisez ActionType ou un appel System autorisé."
+        )
+
+    # 🔒 Validation obligatoire de details
     if not isinstance(details, dict):
-        raise ValueError("details must be a dict or a string")
+        raise ValueError("details doit être un dictionnaire")
 
-    # ── 3. Validation minimale requise par le TP ──────────────────
-    required_keys = ["input_prompt", "output_response"]
-    for key in required_keys:
+    for key in ("input_prompt", "output_response"):
         if key not in details:
-            details[key] = ""
+            raise ValueError(f"Champ obligatoire manquant dans details: {key}")
 
-    # ── 4. Création du dossier logs si nécessaire ─────────────────
-    os.makedirs("logs", exist_ok=True)
-
+    # 📌 Construction du log
     entry = {
         "id": str(uuid.uuid4()),
         "timestamp": datetime.now().isoformat(),
         "agent": agent_name,
         "model": model_used,
-        "action": action_str,
+        "action": action_enum.value,
         "details": details,
         "status": status
     }
 
-    # ── 5. Lecture existante ─────────────────────────────────────
+    # 📖 Lecture existante
     data = []
     if os.path.exists(LOG_FILE):
         try:
@@ -85,11 +87,10 @@ def log_experiment(
                 if content:
                     data = json.loads(content)
         except json.JSONDecodeError:
-            print(f"⚠️ Fichier de logs corrompu, recréation : {LOG_FILE}")
             data = []
 
-    # ── 6. Écriture ──────────────────────────────────────────────
     data.append(entry)
 
+    # 💾 Écriture finale
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)

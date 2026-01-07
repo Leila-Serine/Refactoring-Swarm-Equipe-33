@@ -141,5 +141,117 @@
             "output_response": "System initialized successfully"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "0370f559-250d-4bb6-bb8a-48be7ae9c451",
+        "timestamp": "2026-01-07T18:41:31.192403",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7ebf0620-26c3-4953-ad10-db38ff06927c",
+        "timestamp": "2026-01-07T18:41:54.553212",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e3f56cfe-f02b-4930-9c52-72116edc6632",
+        "timestamp": "2026-01-07T18:43:44.694469",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f45b3763-8745-4989-bc40-256f6763ded1",
+        "timestamp": "2026-01-07T18:43:44.698336",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du fichier sandbox\\test\\example.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ]
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "47c0da2e-727c-4012-9f38-816722de293c",
+        "timestamp": "2026-01-07T18:49:16.239945",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f14429c2-d8ae-4c17-af57-810264c8d0c5",
+        "timestamp": "2026-01-07T18:49:16.242295",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du fichier sandbox\\test\\example.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ]
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "28881941-a95f-45fa-8f11-6bcea9159f20",
+        "timestamp": "2026-01-07T18:52:10.978175",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bc034dd7-7d84-41be-9a05-aa288ccfcd06",
+        "timestamp": "2026-01-07T18:52:10.980164",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\example.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\example.py",
+            "output_response": "Basic analysis completed (fictitious)"
+        },
+        "status": "SUCCESS"
     }
 ]

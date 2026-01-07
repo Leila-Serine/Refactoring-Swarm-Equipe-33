@@ -1,3 +1,4 @@
+from pathlib import Path
 from src.utils.file_tools import read_file
 from src.utils.logger import log_experiment, ActionType
 
@@ -7,12 +8,22 @@ def run_auditor(file_path: str) -> dict:
     Agent Auditor – version minimale conforme TP (Jour 3)
     """
 
-    code = read_file(file_path)
+    path = Path(file_path)
+
+    if path.is_dir():
+        py_files = list(path.glob("*.py"))
+        if not py_files:
+            raise FileNotFoundError("No .py file found in target directory.")
+        target_file = py_files[0]
+    else:
+        target_file = path
+
+    code = read_file(str(target_file))
 
     analysis_result = {
         "issues": [
-            "Analyse fictive : bugs potentiels",
-            "Analyse fictive : style à améliorer"
+            "Fictitious bug detected",
+            "Fictitious style issue"
         ]
     }
 
@@ -21,8 +32,9 @@ def run_auditor(file_path: str) -> dict:
         model_used="N/A",
         action=ActionType.ANALYSIS,
         details={
-            "input_prompt": f"Analyse du fichier {file_path}",
-            "output_response": analysis_result
+            "file_path": str(target_file),
+            "input_prompt": f"Analyze the file: {target_file}",
+            "output_response": "Basic analysis completed (fictitious)"
         },
         status="SUCCESS"
     )

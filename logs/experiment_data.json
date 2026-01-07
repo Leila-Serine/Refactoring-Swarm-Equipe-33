@@ -1,11 +1,145 @@
 [
-  {
-    "id": "9e82e9b0-9b43-4a78-af43-d5d5ef848a2f",
-    "timestamp": "2025-12-26T01:26:41.177789",
-    "agent": "System",
-    "model": "unknown",
-    "action": "STARTUP",
-    "details": "Target: ./sandbox",
-    "status": "INFO"
-  }
+    {
+        "id": "9e82e9b0-9b43-4a78-af43-d5d5ef848a2f",
+        "timestamp": "2025-12-26T01:26:41.177789",
+        "agent": "System",
+        "model": "unknown",
+        "action": "STARTUP",
+        "details": "Target: ./sandbox",
+        "status": "INFO"
+    },
+    {
+        "id": "72f5518e-6dca-4b60-9a9a-ced690c34507",
+        "timestamp": "2026-01-06T21:44:09.293424",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "Target: sandbox/test",
+        "details": {
+            "input_prompt": "INFO",
+            "output_response": ""
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "0431a317-73e7-4554-9888-58eaf3c060b9",
+        "timestamp": "2026-01-06T21:47:54.756088",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "Target: sandbox/test",
+        "details": {
+            "input_prompt": "INFO",
+            "output_response": ""
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "ab9dc113-386c-4e05-8b44-2e977a548e76",
+        "timestamp": "2026-01-06T22:39:27.006766",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du fichier sandbox/test/sample.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ]
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "39a04828-5be0-4b00-90b5-e18902e1c209",
+        "timestamp": "2026-01-06T22:39:27.045927",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "file_path": "sandbox/test/sample.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ]
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "40395ce4-77e1-4cce-83f4-4f8b2a72198c",
+        "timestamp": "2026-01-06T22:42:56.128209",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "Target: sandbox/test",
+        "details": {
+            "input_prompt": "INFO",
+            "output_response": ""
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "daea14c8-5013-4ed1-90ea-2748dcd3f9c8",
+        "timestamp": "2026-01-07T17:51:32.755867",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "cf37adb7-7eeb-40c2-a0ca-a1eed6d2f4aa",
+        "timestamp": "2026-01-07T17:55:12.528034",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "827e0c12-c1a1-4353-ad9c-80cb32ef935b",
+        "timestamp": "2026-01-07T18:01:17.212839",
+        "agent": "System",
+        "model": "STARTUP",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Analyse du fichier sandbox/test/sample.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ]
+            },
+            "target_file": "sandbox/test/sample.py",
+            "agent_role": "Auditor",
+            "iteration": 1,
+            "comment": "Analyse simulée – Jour 3 (sans IA réelle)"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "bc368360-62ff-4768-bcd7-71e33609248e",
+        "timestamp": "2026-01-07T18:17:01.106366",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "target_dir": "sandbox/test",
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        "status": "SUCCESS"
+    }
 ]

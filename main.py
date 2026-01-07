@@ -2,8 +2,11 @@ import argparse
 import sys
 import os
 from dotenv import load_dotenv
-from src.utils.logger import log_experiment
+from src.utils.logger import log_experiment, ActionType
+from src.agents.auditor_agent import run_auditor
 
+
+# Charger les variables d'environnement
 load_dotenv()
 
 def main():
@@ -16,7 +19,22 @@ def main():
         sys.exit(1)
 
     print(f"🚀 DEMARRAGE SUR : {args.target_dir}")
-    log_experiment("System", "STARTUP", f"Target: {args.target_dir}", "INFO")
+
+    # Log conforme au protocole strict du TP
+    log_experiment(
+        agent_name="System",
+        model_used="N/A",
+        action=ActionType.ANALYSIS,
+        details={
+            "target_dir": args.target_dir,
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "System initialized successfully"
+        },
+        status="SUCCESS"
+    )
+    
+    run_auditor(args.target_dir)
+
     print("✅ MISSION_COMPLETE")
 
 if __name__ == "__main__":

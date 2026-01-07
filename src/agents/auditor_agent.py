@@ -3,6 +3,10 @@ from src.utils.logger import log_experiment, ActionType
 
 
 def run_auditor(file_path: str) -> dict:
+    """
+    Agent Auditor – version minimale conforme TP (Jour 3)
+    """
+
     code = read_file(file_path)
 
     analysis_result = {

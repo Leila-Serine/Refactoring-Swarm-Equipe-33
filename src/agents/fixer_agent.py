@@ -1,5 +1,3 @@
-# src/agents/fixer_agent.py
-
 from pathlib import Path
 from src.utils.file_tools import read_file, write_file
 from src.utils.logger import log_experiment, ActionType
@@ -7,39 +5,53 @@ from src.utils.logger import log_experiment, ActionType
 
 def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     """
-    Fixer – Jour 4 & 5
-    - Correction fictive DÉTECTABLE
-    - Compatible fichier OU dossier
+    Fixer (Jour 7/8)
+    - Attend un CHEMIN DE FICHIER
+    - Écrit une correction fictive DÉTECTABLE
+    - Génère un fichier de sortie unique par fichier/itération
+    - Logs conformes
     """
+    p = Path(file_path)
 
-    path = Path(file_path)
+    if not p.exists() or not p.is_file():
+        # On log en FAIL mais on ne crash pas
+        log_experiment(
+            agent_name="Fixer",
+            model_used="N/A",
+            action=ActionType.FIX,
+            details={
+                "input_prompt": {
+                    "iteration": iteration,
+                    "file_path": file_path,
+                    "auditor_output": auditor_output
+                },
+                "output_response": {
+                    "error": "Invalid file path, cannot fix"
+                }
+            },
+            status="FAIL"
+        )
+        # On retourne le même chemin pour laisser main.py gérer l’arrêt
+        return file_path
 
-    # 🟢 Si un dossier est fourni
-    if path.is_dir():
-        py_files = list(path.glob("*.py"))
-        if not py_files:
-            raise FileNotFoundError(
-                "Aucun fichier .py trouvé pour correction."
-            )
-        target_file = py_files[0]
-    else:
-        target_file = path
+    original_code = read_file(str(p))
 
-    # 1️⃣ Lecture du code original
-    original_code = read_file(str(target_file))
-
-    # 2️⃣ Correction fictive VISIBLE et DÉTECTABLE
+    # Correction fictive : retirer ERROR + ajouter marqueur FIXED
+    fixed_body = original_code.replace("ERROR", "").strip()
     fixed_code = (
         f"# FIXED – iteration {iteration}\n"
         "# Correction simulée par Fixer\n\n"
-        + original_code.replace("ERROR", "# ERROR FIXED")
+        f"{fixed_body}\n"
     )
 
-    # 3️⃣ Écriture du fichier corrigé
-    fixed_path = "sandbox/fixed_code.py"
-    write_file(fixed_path, fixed_code)
+    out_dir = Path("sandbox") / "out"
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    # 4️⃣ Log conforme TP
+    out_name = f"{p.stem}_fixed_iter_{iteration}{p.suffix}"
+    fixed_path = out_dir / out_name
+
+    write_file(str(fixed_path), fixed_code)
+
     log_experiment(
         agent_name="Fixer",
         model_used="N/A",
@@ -47,15 +59,15 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
         details={
             "input_prompt": {
                 "iteration": iteration,
-                "file_path": str(target_file),
+                "file_path": str(p),
                 "auditor_output": auditor_output
             },
             "output_response": {
-                "fixed_file": fixed_path,
+                "fixed_file": str(fixed_path),
                 "note": "Correction fictive appliquée"
             }
         },
         status="SUCCESS"
     )
 
-    return fixed_path
+    return str(fixed_path)

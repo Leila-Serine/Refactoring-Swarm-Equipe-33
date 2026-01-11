@@ -6,32 +6,15 @@ from src.utils.logger import log_experiment, ActionType
 from src.agents.auditor_agent import run_auditor
 from src.agents.fixer_agent import run_fixer
 
-# Charger les variables d'environnement
 load_dotenv()
 
 
 def main():
-    # -------------------------------
-    # 1️⃣ Arguments CLI
-    # -------------------------------
     parser = argparse.ArgumentParser(description="Refactoring Swarm Orchestrator")
-    parser.add_argument(
-        "--target_dir",
-        type=str,
-        required=True,
-        help="Fichier ou dossier cible (sandbox uniquement)"
-    )
-    parser.add_argument(
-        "--max_iterations",
-        type=int,
-        default=2,
-        help="Nombre maximum d’itérations Auditor/Fixer"
-    )
+    parser.add_argument("--target_dir", type=str, required=True)
+    parser.add_argument("--max_iterations", type=int, default=2)
     args = parser.parse_args()
 
-    # -------------------------------
-    # 2️⃣ Vérification du chemin
-    # -------------------------------
     if not os.path.exists(args.target_dir):
         print(f"❌ Cible introuvable : {args.target_dir}")
         return
@@ -39,23 +22,18 @@ def main():
     print(f"🚀 DEMARRAGE SUR : {args.target_dir}")
     print(f"🔁 Max iterations : {args.max_iterations}")
 
-    # -------------------------------
-    # 3️⃣ Log SYSTEM – démarrage
-    # -------------------------------
     log_experiment(
         agent_name="System",
         model_used="N/A",
         action=ActionType.DEBUG,
         details={
-            "input_prompt": "System startup – no LLM interaction",
-            "output_response": f"Target directory: {args.target_dir}"
+            "input_prompt": "System startup",
+            "output_response": f"Target: {args.target_dir}"
         },
         status="INFO"
     )
 
-    # -------------------------------
-    # 4️⃣ Découverte des fichiers à traiter
-    # -------------------------------
+    # 🔹 Construction explicite de la liste de fichiers
     if os.path.isfile(args.target_dir):
         files_to_process = [args.target_dir]
 
@@ -77,25 +55,21 @@ def main():
                 },
                 status="FAIL"
             )
-            print("❌ Aucun fichier .py trouvé dans le dossier.")
+            print("❌ Aucun fichier .py trouvé.")
             return
     else:
         print("❌ Chemin invalide.")
         return
 
-    # -------------------------------
-    # 5️⃣ Orchestration contrôlée
-    # -------------------------------
+    # 🔹 Orchestration fichier par fichier
     for file_path in files_to_process:
         print(f"\n📄 Traitement du fichier : {os.path.basename(file_path)}")
-
         current_target = file_path
 
         for iteration in range(1, args.max_iterations + 1):
             print(f"🔄 Itération {iteration}")
 
-            # ---- Auditor ----
-            analysis_result = run_auditor(current_target)
+            analysis = run_auditor(current_target)
 
             log_experiment(
                 agent_name="System",
@@ -103,30 +77,21 @@ def main():
                 action=ActionType.DEBUG,
                 details={
                     "input_prompt": f"Iteration {iteration} – Auditor result",
-                    "output_response": analysis_result
+                    "output_response": analysis
                 },
                 status="SUCCESS"
             )
 
-            # ---- Décision d'arrêt ----
-            if analysis_result.get("decision") == "ACCEPTED":
-                print("✅ Auditor a validé le code. Arrêt du processus.")
+            if analysis.get("decision") == "ACCEPTED":
+                print("✅ Auditor a validé le code.")
                 break
 
-            # ---- Fixer ----
-            print(f"⚠️ Auditor a refusé. Lancer le Fixer pour l'itération {iteration}")
-            current_target = run_fixer(
-                current_target,
-                analysis_result,
-                iteration
-            )
+            print("⚠️ Correction requise → Fixer")
+            current_target = run_fixer(current_target, analysis, iteration)
 
         else:
-            print("🛑 Arrêt : nombre maximum d’itérations atteint")
+            print("🛑 Arrêt : max_iterations atteint")
 
-    # -------------------------------
-    # 6️⃣ Arrêt propre
-    # -------------------------------
     log_experiment(
         agent_name="System",
         model_used="N/A",
@@ -139,7 +104,6 @@ def main():
     )
 
     print("\n✅ FIN DU PROCESSUS")
-    print("🛑 Arrêt après itérations contrôlées")
 
 
 if __name__ == "__main__":

@@ -2280,5 +2280,3417 @@
             "output_response": "Process finished cleanly"
         },
         "status": "INFO"
+    },
+    {
+        "id": "3b727cd8-8968-4e7a-9a11-29783e285118",
+        "timestamp": "2026-01-09T21:59:39.319370",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "6ff0b4b6-63e9-4d06-865e-f168fdf24e4b",
+        "timestamp": "2026-01-09T21:59:39.354198",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\empty.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\empty.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b1bae193-3ab7-4a30-81d1-2c9b0e57e284",
+        "timestamp": "2026-01-09T21:59:39.373126",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\empty.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "788a26c7-f1eb-49aa-9e63-2cfd2fe41ac4",
+        "timestamp": "2026-01-09T21:59:39.389000",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c7d2b176-089b-44cf-8794-9305b1967146",
+        "timestamp": "2026-01-09T21:59:39.401282",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "3ebe8bec-f51c-4550-bf35-378cc763db9f",
+        "timestamp": "2026-01-09T22:00:48.003153",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "7d66dd8a-f853-4f42-b3e2-b788e54457cf",
+        "timestamp": "2026-01-09T22:00:48.020821",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\empty.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\empty.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6e7dc846-43be-4516-9bc0-a3394e92ab01",
+        "timestamp": "2026-01-09T22:00:48.039266",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\empty.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8eb8dd2b-758d-4ce6-8470-5e6584b77bff",
+        "timestamp": "2026-01-09T22:00:48.054757",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2c3df13f-8dff-4ae9-aa35-6e8837f7225c",
+        "timestamp": "2026-01-09T22:00:48.068574",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "a6238853-d33d-47cd-906d-1127c1a977f7",
+        "timestamp": "2026-01-09T22:01:25.512997",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "6acd55e4-6757-424d-a89a-eeaa4481e7c7",
+        "timestamp": "2026-01-09T22:01:25.528902",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\empty",
+            "input_prompt": "Analyze the file: sandbox\\test\\empty",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "44e6482d-cd93-4a5f-acb4-2031d31fc29d",
+        "timestamp": "2026-01-09T22:01:25.545466",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\empty",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f955301c-310f-45a9-99f9-3d5e2b33291c",
+        "timestamp": "2026-01-09T22:01:25.559574",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7f710b68-51f7-4278-ba4c-857846685abc",
+        "timestamp": "2026-01-09T22:01:25.572254",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "02223295-3801-4808-b5a2-bac6615c9bef",
+        "timestamp": "2026-01-09T22:05:13.190613",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/Clean_code.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "697e3f55-6cd1-4d32-8d1f-c6af7d38d8f3",
+        "timestamp": "2026-01-09T22:05:13.197706",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean_code.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3d025c32-4bf7-4555-abc6-063ef5b121b2",
+        "timestamp": "2026-01-09T22:05:13.205061",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "9dbe732c-2809-4c5c-908b-6c5c4fd70f79",
+        "timestamp": "2026-01-09T22:06:03.422406",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "d3b585a2-bb55-4b5d-b1c2-dea993f2cd65",
+        "timestamp": "2026-01-09T22:06:03.431137",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\empty.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\empty.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "097a6a30-bfd7-4743-91ac-e8bbd4661ce0",
+        "timestamp": "2026-01-09T22:06:03.439087",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\empty.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "916f2e7a-cdee-45e0-ab89-514d95fad34b",
+        "timestamp": "2026-01-09T22:06:03.444694",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b986e1ce-bdba-4828-8b27-fc832a0b895a",
+        "timestamp": "2026-01-09T22:06:03.450054",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "19db7f05-2a0e-4619-9d56-546ff93409fe",
+        "timestamp": "2026-01-09T22:33:53.982938",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "b351722f-4dfe-4f53-8888-4101eeb6059c",
+        "timestamp": "2026-01-09T22:33:53.999372",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "34e2d646-463a-4a4a-9df8-0b619edc3d6a",
+        "timestamp": "2026-01-09T22:33:54.004214",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/error.py",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "23112c77-f50f-4cd3-a357-d00411a12f87",
+        "timestamp": "2026-01-09T22:33:54.011443",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "478da6a3-5f47-4e9f-a746-97f4c5306477",
+        "timestamp": "2026-01-09T22:33:54.016458",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/error.py",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "85253e16-f5e7-4e1d-a9f0-823c15eaa61f",
+        "timestamp": "2026-01-09T22:33:54.022213",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "cb5068ec-b33f-440d-a753-b8b0bcb8f735",
+        "timestamp": "2026-01-09T22:33:54.027513",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c58ffbd9-9d9a-4ecc-ae34-55a5e9a70374",
+        "timestamp": "2026-01-09T22:33:54.033390",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "aefe1e47-68f7-42f8-af0a-dcf4bc63200f",
+        "timestamp": "2026-01-09T22:34:39.188398",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "0a0a168a-f6c6-4731-aad4-b0316389db1a",
+        "timestamp": "2026-01-09T22:34:39.197533",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0eabb254-5fce-439c-b769-889a19840586",
+        "timestamp": "2026-01-09T22:34:39.203262",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/error.py",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d1048582-f3af-4041-9f2e-036b676e3fb3",
+        "timestamp": "2026-01-09T22:34:39.210235",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "66f694a9-faac-47c4-b3b7-69e4727a50f9",
+        "timestamp": "2026-01-09T22:34:39.215102",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/error.py",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0bee392e-81a1-4568-b007-333890fa7740",
+        "timestamp": "2026-01-09T22:34:39.221170",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2052907c-37d4-4470-b725-06f866a1f787",
+        "timestamp": "2026-01-09T22:34:39.228756",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "99eb81d0-20ea-423e-9a7f-d57a710a3a09",
+        "timestamp": "2026-01-09T22:34:39.234362",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "ff8609ab-1995-47ca-9edd-05c426230e14",
+        "timestamp": "2026-01-09T22:35:14.257910",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "13d212d4-4bc2-47da-baf3-6d6975ed332f",
+        "timestamp": "2026-01-09T22:35:14.267750",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e967b8e3-fae0-4e9c-9838-a41914c76fba",
+        "timestamp": "2026-01-09T22:35:14.273433",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/error.py",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ca75d1ce-d9e9-4f21-9816-fc3fd2484d0c",
+        "timestamp": "2026-01-09T22:35:14.283157",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "708d984e-ce2e-4609-b9b0-14510ae985ad",
+        "timestamp": "2026-01-09T22:35:14.288232",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/error.py",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "62332606-73fe-4d2e-86ed-4385afedb18a",
+        "timestamp": "2026-01-09T22:35:14.294827",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "08debfac-badf-41d2-8ff5-3dc5438a3f4a",
+        "timestamp": "2026-01-09T22:35:14.300226",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d144e057-3ae4-41c3-af3a-9a0de2133a44",
+        "timestamp": "2026-01-09T22:35:14.306000",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "8e93afe7-d279-44cb-b57c-dd2391f4485f",
+        "timestamp": "2026-01-09T22:37:39.836471",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/ok.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "66582751-9419-4c41-a5c7-cb61f70023e3",
+        "timestamp": "2026-01-09T22:37:39.846045",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\ok.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\ok.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bb0de506-a6c2-4f58-99df-7b646fda9be3",
+        "timestamp": "2026-01-09T22:37:39.851506",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/ok.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7fea19ea-4ff8-42c8-9486-e5b7f5ef5f49",
+        "timestamp": "2026-01-09T22:37:39.857582",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 1",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "8ce50323-4e85-441a-9531-c1a45ae62e43",
+        "timestamp": "2026-01-09T22:38:07.262411",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "23dab962-900e-4829-ab50-a7a9cbb28b33",
+        "timestamp": "2026-01-09T22:38:07.271429",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\empty.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\empty.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b53c54a4-b7e3-461c-a685-b05bedfc5b4e",
+        "timestamp": "2026-01-09T22:38:07.276981",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/empty.py",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fa14309e-1a0d-4de3-b100-976f48b327a4",
+        "timestamp": "2026-01-09T22:38:07.284681",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\empty.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "45dbe5e2-5a24-4067-8441-4e0854e4df9f",
+        "timestamp": "2026-01-09T22:38:07.290876",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/empty.py",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c01268e4-1e3f-4dd9-8f49-922cb3f592a3",
+        "timestamp": "2026-01-09T22:38:07.297212",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1286a149-5be0-4fe3-bc2f-1b0043f70945",
+        "timestamp": "2026-01-09T22:38:07.303697",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1d452943-dfe7-4690-b363-ac1d4139b461",
+        "timestamp": "2026-01-09T22:38:07.310279",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "f910b2bf-6480-4199-8f88-f8ce78959e86",
+        "timestamp": "2026-01-09T22:38:29.231225",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "e6ca8a97-b442-40d6-8811-d7b78598f862",
+        "timestamp": "2026-01-09T22:38:29.239280",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor crashed",
+            "output_response": {
+                "error": "Aucun fichier .py trouvé dans le dossier sandbox/test/empty",
+                "target": "sandbox/test/empty",
+                "iteration": 1
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "d84db755-ffcf-436d-b879-d9cee6bf6000",
+        "timestamp": "2026-01-09T22:38:29.245771",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "FAIL",
+                "reason": "Auditor crashed at iteration 1",
+                "last_audit": null
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "0fbd8b07-bb37-4805-a09c-f003994ad845",
+        "timestamp": "2026-01-09T22:39:21.964908",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/problem"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "fe6193ad-301f-49e3-a02c-8e3c872733e5",
+        "timestamp": "2026-01-09T22:39:21.977094",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\problem",
+            "input_prompt": "Analyze the file: sandbox\\test\\problem",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e350c924-9262-4d10-b272-932cc808b9d4",
+        "timestamp": "2026-01-09T22:39:21.983554",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/problem",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e45be4d5-a563-4430-8ca2-0860ed414bec",
+        "timestamp": "2026-01-09T22:39:21.991657",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\problem",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c07b713b-3e6e-4644-a3db-2219a008c23f",
+        "timestamp": "2026-01-09T22:39:21.997397",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/problem",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "186adc75-bd34-4b33-b6f0-f085a3d855bd",
+        "timestamp": "2026-01-09T22:39:22.004272",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "488f3360-af18-474a-9e66-13a70b0a16c8",
+        "timestamp": "2026-01-09T22:39:22.010821",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7c5fae51-25c0-4b63-88f3-244f8f354aa4",
+        "timestamp": "2026-01-09T22:39:22.017483",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "6c1e70e0-9c38-48c8-a307-366ac60c9250",
+        "timestamp": "2026-01-10T11:44:24.941891",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "78c93f4d-df9b-40ac-a59c-c60991349d49",
+        "timestamp": "2026-01-10T11:44:24.986875",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor crashed",
+            "output_response": {
+                "error": "Aucun fichier .py trouvé dans le dossier sandbox/test/empty",
+                "target": "sandbox/test/empty",
+                "iteration": 1
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "f5fb3447-a21f-4560-9fc8-fa3cffb6d861",
+        "timestamp": "2026-01-10T11:44:25.005934",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "FAIL",
+                "reason": "Auditor crashed at iteration 1",
+                "last_audit": null
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "c3ef2b1d-0ef3-4bcc-a30c-7b8bcafa76dc",
+        "timestamp": "2026-01-10T11:44:42.883943",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "ee3ffdcd-3683-432d-8597-f06735f2a538",
+        "timestamp": "2026-01-10T11:44:42.911652",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b2fc3df6-743b-4429-9c25-7e09bf69e5bf",
+        "timestamp": "2026-01-10T11:44:42.936767",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "iteration": 1,
+                "target": "sandbox/test/error.py",
+                "auditor_result": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "53053b32-9978-44e3-b863-9d8385dd10d1",
+        "timestamp": "2026-01-10T11:44:42.975562",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c71ff659-d979-4914-9a17-8cb5f3ebbe0b",
+        "timestamp": "2026-01-10T11:44:43.002082",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "iteration": 1,
+                "from_target": "sandbox/test/error.py",
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "31ac0ca6-54ed-4433-a6ea-e4db02c67b35",
+        "timestamp": "2026-01-10T11:44:43.031904",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f643b3bf-c238-4ee5-a78e-66100c100725",
+        "timestamp": "2026-01-10T11:44:43.058062",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "iteration": 2,
+                "target": "sandbox/fixed_code.py",
+                "auditor_result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4cb9f3ba-e08e-4654-859d-c69490ef9ef1",
+        "timestamp": "2026-01-10T11:44:43.090239",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": {
+                "final_status": "SUCCESS",
+                "reason": "Accepted at iteration 2",
+                "last_audit": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "28e962f0-5971-454b-981f-b82f62050927",
+        "timestamp": "2026-01-10T12:02:46.646368",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1b837ad6-ddfb-4b00-bc63-1b4a4562a6a6",
+        "timestamp": "2026-01-10T12:02:46.656196",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ed9492de-4673-4bc3-b431-5bd90bb9d0b0",
+        "timestamp": "2026-01-10T12:02:46.663864",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c360bd53-54e0-4d4f-899e-87e7c028cc77",
+        "timestamp": "2026-01-10T12:03:11.882486",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3ee0ac47-7501-410a-a6b0-a6301ca92c24",
+        "timestamp": "2026-01-10T12:03:11.891871",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c48f58a1-b7a1-4880-a230-39a1eedb75e5",
+        "timestamp": "2026-01-10T12:03:11.899495",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4c5daf88-ea3d-49b7-b14b-38a27dca5791",
+        "timestamp": "2026-01-10T12:08:28.628120",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "1a8fba72-27e8-42a4-9ebd-afd4870c736c",
+        "timestamp": "2026-01-10T12:08:28.638006",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d47e604f-a8f1-4e8a-a6e2-89e3c91b7044",
+        "timestamp": "2026-01-10T12:08:28.648031",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2606c18d-c628-480f-a07d-3a986333b6b2",
+        "timestamp": "2026-01-10T12:08:28.657336",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ae5be599-ac26-4120-92b7-d5015f1ddaa8",
+        "timestamp": "2026-01-10T12:08:28.664061",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "01ed2c56-8e62-4e45-9b59-ed58e3c3829d",
+        "timestamp": "2026-01-10T12:08:28.671688",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0c8f1de7-3010-4130-a5d3-46c3acab534f",
+        "timestamp": "2026-01-10T12:08:28.679083",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "70ef4aec-b059-4fc5-9338-4b930f375253",
+        "timestamp": "2026-01-10T12:08:28.686021",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Decision",
+            "output_response": "Auditor accepted the code. Process stopped."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0d0213c1-1569-4b8a-be69-e9bb406a09d0",
+        "timestamp": "2026-01-10T12:08:28.693540",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "80b0671d-99ec-4a9d-bd77-05e86a1a380a",
+        "timestamp": "2026-01-10T12:08:48.444201",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/Clean.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "9c5b3643-7d52-4474-9931-2768f8227d24",
+        "timestamp": "2026-01-10T12:08:48.453499",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1052a473-d12f-4c0f-ab76-332ac924f5c4",
+        "timestamp": "2026-01-10T12:08:48.460120",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d43d9d79-5619-493f-aa20-b313ec1b8ac9",
+        "timestamp": "2026-01-10T12:08:48.469833",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1b9d44dd-b23a-4f2d-a486-ddbaff36f334",
+        "timestamp": "2026-01-10T12:08:48.476612",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b5a7c252-d584-42a0-b334-465cc64bf428",
+        "timestamp": "2026-01-10T12:08:48.484676",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b2a3643f-675c-45bd-ad59-be0e1d9d2de6",
+        "timestamp": "2026-01-10T12:08:48.495687",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6ead3618-95eb-45a5-8eaf-7991552c4d54",
+        "timestamp": "2026-01-10T12:08:48.503234",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Decision",
+            "output_response": "Auditor accepted the code. Process stopped."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f7bbf863-a0be-464f-b148-4b21c97c926b",
+        "timestamp": "2026-01-10T12:08:48.511019",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "f8753730-aefc-406a-8a87-28d863446aaa",
+        "timestamp": "2026-01-10T12:10:58.920162",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "36c51c60-0756-4b04-af1e-092e4b4f9acf",
+        "timestamp": "2026-01-10T12:10:58.931675",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "954cda0a-5539-4a13-b9d0-65caa6689439",
+        "timestamp": "2026-01-10T12:10:58.939150",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor analysis",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "52735a20-de2e-4aa2-9ea8-5ed4e9db766c",
+        "timestamp": "2026-01-10T12:10:58.949213",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3b5c48f7-f849-4065-b00b-e597e7b54c56",
+        "timestamp": "2026-01-10T12:10:58.957201",
+        "agent": "System",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Iteration 1 – Fixer correction",
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ecbfdebf-706a-4e85-a950-53ed4bf09346",
+        "timestamp": "2026-01-10T12:10:58.966125",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b693a5f4-ffef-45c2-878e-a8e072688b89",
+        "timestamp": "2026-01-10T12:10:58.975106",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor analysis",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "257c5e49-a21c-49a6-951f-1e3a5d6bf857",
+        "timestamp": "2026-01-10T12:10:58.982997",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Decision",
+            "output_response": "Auditor accepted the code. Process stopped."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d48a362a-cbec-46dd-9142-6f0ca9e46048",
+        "timestamp": "2026-01-10T12:10:58.992322",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "448734a1-8c71-4ee7-8271-eaa690d8e513",
+        "timestamp": "2026-01-10T12:21:27.151008",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test/Clean.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "601eaa9b-fc49-4363-8fc2-e92d79e73611",
+        "timestamp": "2026-01-10T12:21:39.347871",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "e2d95c1e-43b3-4d5e-b6cd-a67fb61eafbb",
+        "timestamp": "2026-01-10T12:21:39.357780",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d9941109-e192-4509-a937-1a4da436a1f3",
+        "timestamp": "2026-01-10T12:21:39.365430",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a2f3acea-e700-4742-bb61-049b1e22377a",
+        "timestamp": "2026-01-10T12:21:39.375274",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3f007ac3-0588-4fb7-98e4-708a42ff752c",
+        "timestamp": "2026-01-10T12:21:39.384296",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "42a0af18-5db1-4259-991b-9f1e6d3e4694",
+        "timestamp": "2026-01-10T12:21:39.392587",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f7e4db11-29d8-427b-9f89-2b077e85d6ba",
+        "timestamp": "2026-01-10T12:21:39.401765",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4b0852ed-b299-48eb-8152-a357f115031e",
+        "timestamp": "2026-01-10T12:21:39.410002",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "49ac00bb-1dd3-4add-b7ca-d160af2b0c62",
+        "timestamp": "2026-01-10T12:21:39.420673",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "58713650-7e96-4d84-b3cb-10f816a2b071",
+        "timestamp": "2026-01-10T12:21:39.429748",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ed7890ce-82a9-45d8-83a4-7c9ecd7c4b62",
+        "timestamp": "2026-01-10T12:21:39.440166",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4d1afc49-80b1-4b1f-a54b-c9f4eb1809da",
+        "timestamp": "2026-01-10T12:21:39.447846",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "cd62fda8-07fe-4ac6-9719-13bc93a73e7d",
+        "timestamp": "2026-01-10T12:23:34.883114",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "b1fa036a-f29d-479e-b0c9-ccabbdcb6be6",
+        "timestamp": "2026-01-10T12:23:34.893043",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": "No Python files found"
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "9717bd6d-68c9-4354-aeb3-e0791d32387d",
+        "timestamp": "2026-01-10T12:32:45.986517",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target path: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "e56097d1-5128-41e5-ab17-2661bcc85440",
+        "timestamp": "2026-01-10T12:32:45.997136",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7dc8684a-77c1-47f8-a5cb-854f86930339",
+        "timestamp": "2026-01-10T12:32:46.005230",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Orchestrator received auditor decision",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9d34ed35-5471-473f-aecc-70b32f9b996a",
+        "timestamp": "2026-01-10T12:32:46.016556",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6b935a27-4ab1-428a-94f1-367ec30c5f06",
+        "timestamp": "2026-01-10T12:32:46.025557",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c2351219-42ce-4194-882b-7376d35f8548",
+        "timestamp": "2026-01-10T12:32:46.033238",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Orchestrator received auditor decision",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "218b48da-3a9f-41aa-8b71-1d854084719c",
+        "timestamp": "2026-01-10T12:32:46.042589",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ca14832e-6e0b-48ef-a8b0-ce0969ead0d9",
+        "timestamp": "2026-01-10T12:32:46.050568",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Orchestrator received auditor decision",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "cec4060d-4883-47c3-b77c-038c2095e899",
+        "timestamp": "2026-01-10T12:32:46.060912",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c2fc89de-a793-4363-997e-8c3ff01e9462",
+        "timestamp": "2026-01-10T12:32:46.070111",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b17e751a-fe8a-448e-b227-2644ae5809d0",
+        "timestamp": "2026-01-10T12:32:46.079491",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Orchestrator received auditor decision",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bfa9b8b9-f6ec-47ea-8650-34c600b771fc",
+        "timestamp": "2026-01-10T12:32:46.088341",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "f92aba9e-be12-4271-8355-3f1892979529",
+        "timestamp": "2026-01-10T12:32:57.835404",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target path: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "a512ad4e-4cfa-47b4-bf55-7e3a10554e84",
+        "timestamp": "2026-01-10T12:32:57.845078",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": "No Python files found"
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "28ba3cbd-a297-41f3-b343-26f48f7199fc",
+        "timestamp": "2026-01-10T12:33:30.860145",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target path: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "695fefe7-7e95-45bf-80b1-c1a20120dbb1",
+        "timestamp": "2026-01-10T12:38:59.020986",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "a4e10a47-d89c-4c8b-9c74-1c2104d75fad",
+        "timestamp": "2026-01-10T12:38:59.042719",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "aecfecf9-0c10-4c77-a48f-c0f92236cbfe",
+        "timestamp": "2026-01-10T12:38:59.058164",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "478e8431-fe91-44b3-9bdf-176151c8171b",
+        "timestamp": "2026-01-10T12:38:59.084690",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "384f1fc0-27f3-4b5e-9e04-0923882d1cf4",
+        "timestamp": "2026-01-10T12:38:59.101179",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "178de0d0-2993-4751-b53e-5bd162a5ee7d",
+        "timestamp": "2026-01-10T12:38:59.120439",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c63dee34-6b9b-4f97-9173-2c98b598dcd5",
+        "timestamp": "2026-01-10T12:38:59.140066",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2151498b-8fa0-4539-8cdf-763c3e927d5f",
+        "timestamp": "2026-01-10T12:38:59.157554",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ebdd5129-f735-4239-aa9e-4c23ab1fc6ba",
+        "timestamp": "2026-01-10T12:38:59.191161",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0a805371-b51e-4e48-bce0-7e981b1c3eaf",
+        "timestamp": "2026-01-10T12:38:59.216909",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8b0b1ec1-d940-4c24-a107-10bd532f25cc",
+        "timestamp": "2026-01-10T12:38:59.238386",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "55d9f50d-1b33-424b-bdb5-ae5c2be5282c",
+        "timestamp": "2026-01-10T12:38:59.259008",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "12028dff-3c92-450a-8057-f9ab8a418bca",
+        "timestamp": "2026-01-10T12:39:03.670338",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "8face00b-bf41-419e-b89b-98b6d6d5858b",
+        "timestamp": "2026-01-10T12:39:03.695578",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": "No Python files found"
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "cd5fa583-e471-409a-af6d-5cd1a715ad6c",
+        "timestamp": "2026-01-10T12:39:08.363979",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": "Target directory: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "d507e8fa-0a6e-40fd-affa-21c659f7bba4",
+        "timestamp": "2026-01-10T12:39:08.392717",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d1275380-fa77-4add-889d-fdf0968ea8d9",
+        "timestamp": "2026-01-10T12:39:08.420150",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d6f0c13d-0f61-46f9-ac33-af8cc34ae534",
+        "timestamp": "2026-01-10T12:39:08.449213",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d18db4cb-f518-40aa-a4f0-28928b6be272",
+        "timestamp": "2026-01-10T12:39:08.483704",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0c4e2be1-f328-49b7-8378-3be3a688180f",
+        "timestamp": "2026-01-10T12:39:08.510017",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7010d32e-b54b-4f77-a16c-acdd81c8f4cc",
+        "timestamp": "2026-01-10T12:39:08.534216",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "27104b57-b597-491a-96bc-b606b4001282",
+        "timestamp": "2026-01-11T21:17:12.552755",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": "Target: sandbox/test"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "d2c9c8b8-c967-48e7-af2c-5ffe20245a0b",
+        "timestamp": "2026-01-11T21:17:12.566635",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\Clean.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4bf104b9-d3b1-46f3-9443-f5ca89e1c226",
+        "timestamp": "2026-01-11T21:17:12.576179",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bd2042af-bff3-4557-b6c3-f6666d9a795f",
+        "timestamp": "2026-01-11T21:17:12.586794",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\Clean.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bdb2ad26-17f7-4d5d-bbd4-8b1e5da0d755",
+        "timestamp": "2026-01-11T21:17:12.596338",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fc453952-c8ba-4267-a500-e185d9927e91",
+        "timestamp": "2026-01-11T21:17:12.605634",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4b80db11-edbe-41f8-bd66-2917b3763fc1",
+        "timestamp": "2026-01-11T21:17:12.617921",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f337636c-6569-49f5-8e60-ce293843acd9",
+        "timestamp": "2026-01-11T21:17:12.627429",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "cd23defd-e5dd-4368-bf8e-a2b23cdb7cb4",
+        "timestamp": "2026-01-11T21:17:12.638621",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bdb6ecb0-22fb-4717-934f-f39afbbe680c",
+        "timestamp": "2026-01-11T21:17:12.648376",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "233c965a-ac4a-4b5b-a0fc-c71929752d66",
+        "timestamp": "2026-01-11T21:17:12.657294",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0c88c754-7259-4030-8008-41bdc72b8c2a",
+        "timestamp": "2026-01-11T21:17:12.666107",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "48b27678-07af-414e-ab1c-3a01a146b16b",
+        "timestamp": "2026-01-11T21:17:38.539388",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": "Target: sandbox/test/empty"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "3fdcc751-b5ca-4636-9a1a-c92cf6ad59aa",
+        "timestamp": "2026-01-11T21:17:38.549690",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": "No Python files found"
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "56e06a64-848a-491c-b243-c45bc278c039",
+        "timestamp": "2026-01-11T21:18:09.392034",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": "Target: sandbox/test/error.py"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "d221a0b6-2ad0-4423-bf3c-3a498a719414",
+        "timestamp": "2026-01-11T21:18:09.404453",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\test\\error.py",
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b773c816-12cb-4082-b32f-68e4a1f5349f",
+        "timestamp": "2026-01-11T21:18:09.415777",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 1 – Auditor result",
+            "output_response": {
+                "issues": [
+                    "Analyse fictive : bugs potentiels",
+                    "Analyse fictive : style à améliorer"
+                ],
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ca1e89f3-1f27-4c7b-a659-2c0d76f7a1cc",
+        "timestamp": "2026-01-11T21:18:09.428962",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Analyse fictive : bugs potentiels",
+                        "Analyse fictive : style à améliorer"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox/fixed_code.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8d38d86a-3d23-4521-9b1b-7fec23e0f8ad",
+        "timestamp": "2026-01-11T21:18:09.440267",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "file_path": "sandbox\\fixed_code.py",
+            "input_prompt": "Analyze the file: sandbox\\fixed_code.py",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9054d90a-9d3b-4057-be6a-9b38eaecaca5",
+        "timestamp": "2026-01-11T21:18:09.451413",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Iteration 2 – Auditor result",
+            "output_response": {
+                "issues": [],
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7c7b6263-2ec1-4f6b-8e64-6b8fdad1f122",
+        "timestamp": "2026-01-11T21:18:09.463445",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "409442f2-16c7-4723-8796-ee6baabf71d4",
+        "timestamp": "2026-01-11T21:49:43.645495",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": {
+                "target_dir": "sandbox/test",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "821d612c-0511-4bd6-abf3-77a2f25e5a51",
+        "timestamp": "2026-01-11T21:49:43.657641",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\Clean.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "326e9ec2-801f-4ff3-ba50-67d90a8a3525",
+        "timestamp": "2026-01-11T21:49:43.668865",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8cd7d61b-a015-42e8-b38e-f9dcc1811f4c",
+        "timestamp": "2026-01-11T21:49:43.679879",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\out\\error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e31e2141-5a40-4475-9c58-fff7ad690caa",
+        "timestamp": "2026-01-11T21:49:43.690654",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\out\\error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\out\\error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "5d586f85-fa1c-4e35-ac82-cd9d4fc6c81d",
+        "timestamp": "2026-01-11T21:49:43.700195",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "faa868d2-01ad-4207-8aa6-00ed7bf3fe3a",
+        "timestamp": "2026-01-11T21:55:49.564010",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": {
+                "target_dir": "sandbox/test/empty",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "14198d2e-a42c-4b0a-96df-a337c038533a",
+        "timestamp": "2026-01-11T21:55:49.575209",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": {
+                "target_dir": "sandbox/test/empty",
+                "file_ext": ".py",
+                "result": "No files found matching .py"
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "b043705d-d338-4e58-adc8-90d7d1db1b6f",
+        "timestamp": "2026-01-13T08:27:33.503719",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup – no LLM interaction",
+            "output_response": {
+                "target_dir": "sandbox/test",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "c995914b-c555-4eab-9b52-498964d1a1fc",
+        "timestamp": "2026-01-13T08:27:33.545507",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\Clean.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "df628593-7cd4-4e44-8d7f-6787b82de2e0",
+        "timestamp": "2026-01-13T08:27:33.583425",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "416c1955-e545-4fe4-a336-598cc7f6a4bc",
+        "timestamp": "2026-01-13T08:27:33.618971",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\out\\error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "473beedf-1917-4e04-a9e2-a27ce84d7f1a",
+        "timestamp": "2026-01-13T08:27:33.648139",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\out\\error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\out\\error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "89a82639-2b81-49a8-8ecc-cab2ab86caf9",
+        "timestamp": "2026-01-13T08:27:33.676825",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "Process finished cleanly"
+        },
+        "status": "INFO"
     }
 ]

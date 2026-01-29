@@ -5692,5 +5692,555 @@
             "output_response": "Process finished cleanly"
         },
         "status": "INFO"
+    },
+    {
+        "id": "c4bf8f6d-3907-4d61-acc7-db06819047c8",
+        "timestamp": "2026-01-29T15:32:54.057182",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": {
+                "target_dir": "sandbox/test",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "546e9642-b95d-44e5-829a-ff8d9bc59586",
+        "timestamp": "2026-01-29T15:32:54.069859",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\Clean.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ef56778e-fe48-4b35-a0f7-f5174b4f106b",
+        "timestamp": "2026-01-29T15:32:54.079707",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\test\\Clean.py",
+                "iteration": 1,
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3d98f410-d7d5-4f6b-97ad-785941e464a9",
+        "timestamp": "2026-01-29T15:32:54.090000",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Stop condition",
+            "output_response": {
+                "file": "sandbox\\test\\Clean.py",
+                "iteration": 1,
+                "reason": "ACCEPTED"
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "d819768f-3eb7-47a7-8120-292416b9b1b2",
+        "timestamp": "2026-01-29T15:32:54.104556",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9d38c0bc-389f-4c4e-8419-8192cdf43404",
+        "timestamp": "2026-01-29T15:32:54.114437",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\test\\error.py",
+                "iteration": 1,
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0fd56e22-6900-46b6-be27-2a486dfe351d",
+        "timestamp": "2026-01-29T15:32:54.128670",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\out\\error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4b028c74-ef57-4694-a691-c6b55f11b025",
+        "timestamp": "2026-01-29T15:32:54.139993",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\out\\error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\out\\error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b7b37025-965a-4797-a890-1133e32b2f4f",
+        "timestamp": "2026-01-29T15:32:54.180045",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d13aa270-58c6-4b52-b9cb-b2fe2a948327",
+        "timestamp": "2026-01-29T15:32:54.199886",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Stop condition",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "reason": "ACCEPTED"
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "a2f375b9-fec6-47b6-b411-823d082f9d82",
+        "timestamp": "2026-01-29T15:32:54.212858",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "All files processed, clean termination"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "4fd986b1-1d44-4437-9a16-f9f4c3f81a80",
+        "timestamp": "2026-01-29T15:33:43.498117",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": {
+                "target_dir": "sandbox/test/empty",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "f01b2e8f-abf4-4c3a-b0b6-c2fe5458d2fe",
+        "timestamp": "2026-01-29T15:33:43.510267",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "File discovery",
+            "output_response": {
+                "target_dir": "sandbox/test/empty",
+                "file_ext": ".py",
+                "result": "No matching files found"
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "fee336a1-1349-43ed-a6e7-3e05267a8c1d",
+        "timestamp": "2026-01-29T15:41:35.019536",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": {
+                "target_dir": "sandbox/test",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "7ad21b87-9568-4d47-a892-ffc3db6c0ff2",
+        "timestamp": "2026-01-29T15:41:35.032344",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\Clean.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\Clean.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d7a00adf-7072-4c41-9539-3d45bad3306b",
+        "timestamp": "2026-01-29T15:41:35.042988",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\test\\Clean.py",
+                "iteration": 1,
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "65b76984-453a-437f-8d24-e9d2ac625284",
+        "timestamp": "2026-01-29T15:41:35.055545",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Stop condition",
+            "output_response": {
+                "file": "sandbox\\test\\Clean.py",
+                "iteration": 1,
+                "reason": "ACCEPTED"
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "887c3717-7df3-48a4-9406-6c99ada553fc",
+        "timestamp": "2026-01-29T15:41:35.067868",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "96541e92-0649-4eb8-b728-2901e21e944d",
+        "timestamp": "2026-01-29T15:41:35.078266",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\test\\error.py",
+                "iteration": 1,
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "52294871-dc42-4a82-92d4-b41aea96a296",
+        "timestamp": "2026-01-29T15:41:35.090019",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\out\\error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "88c2de6e-1e72-4f56-9f7a-bde588b53202",
+        "timestamp": "2026-01-29T15:41:35.101616",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\out\\error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\out\\error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ccf9fec5-8c18-47dd-a259-86823fdce6b2",
+        "timestamp": "2026-01-29T15:41:35.113039",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8de3794b-c18f-4786-b050-37a7e32605f3",
+        "timestamp": "2026-01-29T15:41:35.125743",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Stop condition",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "reason": "ACCEPTED"
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "e6af54fd-7478-4b13-a4dd-369ad7be9bf9",
+        "timestamp": "2026-01-29T15:41:35.138262",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "All files processed, clean termination"
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "efebc04b-da1c-40b6-8ba6-b991076a1332",
+        "timestamp": "2026-01-29T15:41:46.006813",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System startup",
+            "output_response": {
+                "target_dir": "sandbox/test/error.py",
+                "max_iterations": 2,
+                "file_ext": ".py",
+                "dry_run": false
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "6a0442e8-68a6-427a-a003-3b3804843dcb",
+        "timestamp": "2026-01-29T15:41:46.019620",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test\\error.py",
+            "output_response": {
+                "file_path": "sandbox\\test\\error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6295afee-dcc6-425c-a539-b970c74c3a99",
+        "timestamp": "2026-01-29T15:41:46.029849",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\test\\error.py",
+                "iteration": 1,
+                "decision": "REQUIRES_FIX"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "db40502e-ac64-4893-a3d0-5ae7e43ee6bc",
+        "timestamp": "2026-01-29T15:41:46.042743",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test\\error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\out\\error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "839627d1-c7ef-47d3-8e0f-ba5d4ff37cba",
+        "timestamp": "2026-01-29T15:41:46.054544",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\out\\error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\out\\error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1ea88d44-3149-40da-aa6b-b4a822bb13ce",
+        "timestamp": "2026-01-29T15:41:46.064649",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Auditor decision received",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "decision": "ACCEPTED"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2f47dcbe-4d91-49a9-84a4-da17d95f1944",
+        "timestamp": "2026-01-29T15:41:46.076479",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Stop condition",
+            "output_response": {
+                "file": "sandbox\\out\\error_fixed_iter_1.py",
+                "iteration": 2,
+                "reason": "ACCEPTED"
+            }
+        },
+        "status": "INFO"
+    },
+    {
+        "id": "107f02ce-0708-44b5-8a98-c44ad0574991",
+        "timestamp": "2026-01-29T15:41:46.087517",
+        "agent": "System",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "System shutdown",
+            "output_response": "All files processed, clean termination"
+        },
+        "status": "INFO"
     }
 ]

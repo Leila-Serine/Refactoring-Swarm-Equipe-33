@@ -3,6 +3,8 @@ import sys
 import os
 from dotenv import load_dotenv
 from src.utils.logger import log_experiment, ActionType
+from src.agents.auditor_agent import run_auditor
+
 
 # Charger les variables d'environnement
 load_dotenv()
@@ -30,6 +32,8 @@ def main():
         },
         status="SUCCESS"
     )
+    
+    run_auditor(args.target_dir)
 
     print("✅ MISSION_COMPLETE")
 

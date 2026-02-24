@@ -12,24 +12,24 @@ def _is_safe_path(base_dir: Path, target_path: Path) -> bool:
     except Exception:
         return False
 
-
 def read_file(file_path: str) -> str:
     """
-    Lecture sécurisée d’un fichier.
+    Lecture robuste d’un fichier avec fallback d'encodage.
     """
-
-    if not isinstance(file_path, str):
-        raise ValueError("file_path must be a string")
 
     path = Path(file_path)
 
     if not path.exists():
-        raise FileNotFoundError(f"Fichier introuvable : {file_path}")
+        raise FileNotFoundError(f"File not found: {file_path}")
 
     if not path.is_file():
-        raise ValueError("Le chemin fourni n'est pas un fichier.")
+        raise ValueError("Path is not a file")
 
-    return path.read_text(encoding="utf-8")
+    try:
+        return path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        # Fallback Windows
+        return path.read_text(encoding="utf-16", errors="ignore")
 
 
 def write_file(file_path: str, content: str) -> None:

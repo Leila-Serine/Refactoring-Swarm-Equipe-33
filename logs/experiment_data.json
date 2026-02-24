@@ -6242,5 +6242,166 @@
             "output_response": "All files processed, clean termination"
         },
         "status": "INFO"
+    },
+    {
+        "id": "7be654fc-2a0d-4463-a642-c5ac6436558d",
+        "timestamp": "2026-02-24T10:49:52.992076",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test_local\\example.py",
+            "output_response": {
+                "file_path": "sandbox\\test_local\\example.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "78c6f641-e87b-491a-9a40-3fd39a4989dc",
+        "timestamp": "2026-02-24T10:51:18.065199",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test_local\\example.py",
+            "output_response": {
+                "file_path": "sandbox\\test_local\\example.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e3eb15c2-84f8-42d1-9b4d-f4c3fed599e9",
+        "timestamp": "2026-02-24T10:51:18.077245",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test_local\\example.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\test_local\\example_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "114dbb0e-986f-43c0-9202-e2c6db862764",
+        "timestamp": "2026-02-24T11:02:23.758803",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test_local\\example.py",
+            "output_response": {
+                "file_path": "sandbox\\test_local\\example.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "60b685ab-b184-45fa-b457-2185ad95c8b8",
+        "timestamp": "2026-02-24T11:02:23.769988",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\test_local\\example.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\test_local\\example_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ecc417ea-25bc-4538-b9a7-e53129944288",
+        "timestamp": "2026-02-24T11:02:24.404282",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/test_local"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.14.0, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\IGL_TP\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1\ncollected 0 items\n\n============================ no tests ran in 0.01s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "9a297758-86ec-481e-a73f-d32c754c5570",
+        "timestamp": "2026-02-24T11:02:24.418578",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test_local\\example_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\test_local\\example_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9a1f2f78-5329-4017-a8ef-d9c44e1f9299",
+        "timestamp": "2026-02-24T11:02:24.431525",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\test_local\\example_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\test_local\\example_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
     }
 ]

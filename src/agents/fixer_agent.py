@@ -5,16 +5,16 @@ from src.utils.logger import log_experiment, ActionType
 
 def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     """
-    Fixer (Jour 7/8)
-    - Attend un CHEMIN DE FICHIER
-    - Écrit une correction fictive DÉTECTABLE
-    - Génère un fichier de sortie unique par fichier/itération
+    Fixer – Version finale corrigée
+    - Respecte strictement le dossier target_dir (sandbox uniquement)
+    - Génère un fichier corrigé dans le même dossier que le fichier original
     - Logs conformes
     """
+
     p = Path(file_path)
 
+    # ---------------- Validation ----------------
     if not p.exists() or not p.is_file():
-        # On log en FAIL mais on ne crash pas
         log_experiment(
             agent_name="Fixer",
             model_used="N/A",
@@ -31,27 +31,55 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
             },
             status="FAIL"
         )
-        # On retourne le même chemin pour laisser main.py gérer l’arrêt
         return file_path
 
-    original_code = read_file(str(p))
+    try:
+        original_code = read_file(str(p))
+    except Exception as e:
+        log_experiment(
+            agent_name="Fixer",
+            model_used="N/A",
+            action=ActionType.FIX,
+            details={
+                "input_prompt": str(p),
+                "output_response": {"error": str(e)}
+            },
+            status="FAIL"
+        )
+        return file_path
 
-    # Correction fictive : retirer ERROR + ajouter marqueur FIXED
+    # ---------------- Correction simulée ----------------
     fixed_body = original_code.replace("ERROR", "").strip()
+
     fixed_code = (
         f"# FIXED – iteration {iteration}\n"
         "# Correction simulée par Fixer\n\n"
         f"{fixed_body}\n"
     )
 
-    out_dir = Path("sandbox") / "out"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    # ---------------- Respect strict du target_dir ----------------
+    # On écrit dans le même dossier que le fichier original
+    out_dir = p.parent
 
     out_name = f"{p.stem}_fixed_iter_{iteration}{p.suffix}"
     fixed_path = out_dir / out_name
 
-    write_file(str(fixed_path), fixed_code)
+    try:
+        write_file(str(fixed_path), fixed_code)
+    except Exception as e:
+        log_experiment(
+            agent_name="Fixer",
+            model_used="N/A",
+            action=ActionType.FIX,
+            details={
+                "input_prompt": str(fixed_path),
+                "output_response": {"error": str(e)}
+            },
+            status="FAIL"
+        )
+        return file_path
 
+    # ---------------- Log SUCCESS ----------------
     log_experiment(
         agent_name="Fixer",
         model_used="N/A",

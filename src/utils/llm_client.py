@@ -13,7 +13,7 @@ def get_llm():
         raise ValueError("GOOGLE_API_KEY not found in environment")
     
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         google_api_key=api_key,
         temperature=0.1,
         max_tokens=2000
@@ -39,10 +39,15 @@ def analyze_code_with_llm(code: str, file_path: str) -> dict:
         response = llm.invoke(prompt)
         content = response.content
         
+        # Extraction correcte du JSON
         if "```json" in content:
-            content = content.split("```json").split("```").strip()[1]
+            parts = content.split("```json")
+            if len(parts) > 1:
+                content = parts[1].split("```").strip()
         elif "```" in content:
-            content = content.split("```").split("```")[0].strip()
+            parts = content.split("```")
+            if len(parts) >= 2:
+                content = parts.strip()
         
         result = json.loads(content)
         return result
@@ -65,16 +70,21 @@ def fix_code_with_llm(code: str, file_path: str, issues: list) -> str:
     prompt += f"File: {file_path}\n\n"
     prompt += "Issues to fix:\n" + issues_text + "\n\n"
     prompt += "Original code:\n" + code + "\n\n"
-    prompt += "Provide ONLY the fixed Python code, without explanations or markdown."
+    prompt += "Provide ONLY the fixed Python code, without explanations or markdown blocks."
     
     try:
         response = llm.invoke(prompt)
         fixed_code = response.content.strip()
         
+        # Extraction correcte du code
         if "```python" in fixed_code:
-            fixed_code = fixed_code.split("```python").split("```").strip()[1]
+            parts = fixed_code.split("```python")
+            if len(parts) > 1:
+                fixed_code = parts.split("```")[0].strip()
         elif "```" in fixed_code:
-            fixed_code = fixed_code.split("```").split("```")[0].strip()
+            parts = fixed_code.split("```")
+            if len(parts) >= 2:
+                fixed_code = parts[1].strip()
         
         return fixed_code
         

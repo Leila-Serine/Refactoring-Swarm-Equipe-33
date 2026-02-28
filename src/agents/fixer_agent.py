@@ -1,6 +1,7 @@
 from pathlib import Path
 from src.utils.file_tools import read_file, write_file
 from src.utils.logger import log_experiment, ActionType
+from src.utils.llm_client import fix_code_with_llm
 
 
 def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
@@ -17,7 +18,7 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     if not p.exists() or not p.is_file():
         log_experiment(
             agent_name="Fixer",
-            model_used="N/A",
+            model_used="gemini-2.5-flash",
             action=ActionType.FIX,
             details={
                 "input_prompt": {
@@ -38,7 +39,7 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     except Exception as e:
         log_experiment(
             agent_name="Fixer",
-            model_used="N/A",
+            model_used="gemini-2.5-flash",
             action=ActionType.FIX,
             details={
                 "input_prompt": str(p),
@@ -48,12 +49,16 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
         )
         return file_path
 
-    # ---------------- Correction simulée ----------------
-    fixed_body = original_code.replace("ERROR", "").strip()
+    # ---------------- VRAIE Correction avec Gemini ----------------
+    issues = auditor_output.get("issues", [])
+    if issues:
+        fixed_body = fix_code_with_llm(original_code, str(p), issues)
+    else:
+        fixed_body = original_code
 
     fixed_code = (
         f"# FIXED – iteration {iteration}\n"
-        "# Correction simulée par Fixer\n\n"
+        f"# Corrected by Gemini API\n\n"
         f"{fixed_body}\n"
     )
 
@@ -69,7 +74,7 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     except Exception as e:
         log_experiment(
             agent_name="Fixer",
-            model_used="N/A",
+            model_used="gemini-2.5-flash",
             action=ActionType.FIX,
             details={
                 "input_prompt": str(fixed_path),
@@ -82,7 +87,7 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
     # ---------------- Log SUCCESS ----------------
     log_experiment(
         agent_name="Fixer",
-        model_used="N/A",
+        model_used="gemini-2.5-flash",
         action=ActionType.FIX,
         details={
             "input_prompt": {
@@ -92,7 +97,7 @@ def run_fixer(file_path: str, auditor_output: dict, iteration: int) -> str:
             },
             "output_response": {
                 "fixed_file": str(fixed_path),
-                "note": "Correction fictive appliquée"
+                "note": "Correction appliquée via Gemini"
             }
         },
         status="SUCCESS"

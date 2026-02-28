@@ -16,7 +16,7 @@ def run_auditor(file_path: str) -> dict:
         }
         log_experiment(
             agent_name="Auditor",
-            model_used="gemini-1.5-flash",
+            model_used="gemini-2.5-flash",
             action=ActionType.ANALYSIS,
             details={
                 "input_prompt": f"Analyze file (invalid path): {file_path}",
@@ -38,7 +38,7 @@ def run_auditor(file_path: str) -> dict:
 
     log_experiment(
         agent_name="Auditor",
-        model_used="gemini-1.5-flash",
+        model_used="gemini-2.5-flash",
         action=ActionType.ANALYSIS,
         details={
             "input_prompt": f"Analyze the file: {str(p)}",

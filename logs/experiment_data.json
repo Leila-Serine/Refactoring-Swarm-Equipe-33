@@ -6403,5 +6403,546 @@
             }
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "1f3c4892-b4b7-4eca-a02f-e31ed8aea907",
+        "timestamp": "2026-02-28T20:17:23.524942",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "02625358-187c-43b9-a554-7d634829192f",
+        "timestamp": "2026-02-28T20:17:23.543923",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7965e4bb-3993-445a-a6de-dabb2f69a30a",
+        "timestamp": "2026-02-28T20:17:23.573992",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "02f9f865-fb42-4318-b4c1-1795bff5df17",
+        "timestamp": "2026-02-28T20:17:23.601203",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3c865b61-607d-40cf-9e51-907160b687e2",
+        "timestamp": "2026-02-28T20:17:23.630687",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "be4e5527-2789-48eb-bb9c-cbbf280db816",
+        "timestamp": "2026-02-28T20:26:27.097900",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "647c0c3f-aa91-4a03-80a1-569a6965a934",
+        "timestamp": "2026-02-28T20:26:27.114102",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "787d596e-c117-4e6f-ac16-72c56313af70",
+        "timestamp": "2026-02-28T20:26:27.143430",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "52da51ba-f57a-4b54-ae81-5cfe9c1e7ee0",
+        "timestamp": "2026-02-28T20:26:27.169277",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c85f7822-b434-42ea-84c5-97892af27a02",
+        "timestamp": "2026-02-28T20:26:27.195754",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "59e87bb9-4297-41ef-acf6-bb445a52d771",
+        "timestamp": "2026-02-28T20:26:27.225771",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "result": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "54383ec7-43e3-4a5f-88df-08c7f4cd468c",
+        "timestamp": "2026-02-28T20:26:27.252990",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "auditor_output": {
+                    "issues": [
+                        "Contains token ERROR"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "617abd2c-532c-424a-851c-529f5db1ac49",
+        "timestamp": "2026-02-28T20:26:28.996836",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1\ncollected 0 items\n\n============================ no tests ran in 0.07s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "88f9e93c-d3c8-4b7d-b624-441dc8ef15cd",
+        "timestamp": "2026-02-28T20:26:29.018727",
+        "agent": "Auditor",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "result": {
+                    "issues": [],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d1df6bc4-7bbd-48ac-83ca-53f702de2181",
+        "timestamp": "2026-02-28T21:02:59.047948",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d89a6d3e-60ab-47eb-9c72-f4c28bdfcc48",
+        "timestamp": "2026-02-28T21:03:00.931123",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8b93a053-fdea-468b-9d53-5163e3629de4",
+        "timestamp": "2026-02-28T21:03:02.775009",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9fffaff1-a757-4d82-8a0e-4e550e4c3498",
+        "timestamp": "2026-02-28T21:03:04.835460",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f66b46f1-dd47-4214-ae02-0fa4641f87d4",
+        "timestamp": "2026-02-28T21:03:06.746788",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d0f033d1-6c52-430e-8cc4-180986c0c0e2",
+        "timestamp": "2026-02-28T21:03:08.726720",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2f189e2d-7f66-4e40-bd11-a9560eb91731",
+        "timestamp": "2026-02-28T21:03:10.593177",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "10639948-48d2-4536-aa3a-bcbf8a0e5bc9",
+        "timestamp": "2026-02-28T21:04:44.868888",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b497eae6-9a64-4065-b6af-1259c0fa7867",
+        "timestamp": "2026-02-28T21:04:46.748105",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c824f238-9a9e-4e4e-a868-e46e15be49d0",
+        "timestamp": "2026-02-28T21:04:48.543311",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "140cd6ba-a130-4704-9e32-0cd69297b995",
+        "timestamp": "2026-02-28T21:04:50.283358",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c8b130b9-09a1-487d-9a29-1126b77bbe82",
+        "timestamp": "2026-02-28T21:04:52.006321",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1485ba70-1b2b-471d-8c14-151fd6f99e73",
+        "timestamp": "2026-02-28T21:04:53.836780",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e5040cff-9bef-49de-aa01-a920f8b89882",
+        "timestamp": "2026-02-28T21:04:55.510415",
+        "agent": "Auditor",
+        "model": "gemini-pro",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "ACCEPTED"
+                }
+            }
+        },
+        "status": "SUCCESS"
     }
 ]

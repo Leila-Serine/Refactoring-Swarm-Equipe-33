@@ -6944,5 +6944,887 @@
             }
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "9f34d62f-0382-4179-99e1-6b22f4a7fc09",
+        "timestamp": "2026-02-28T21:11:15.228331",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0f320b36-1e69-40e8-aa14-e36b15e9d9c1",
+        "timestamp": "2026-02-28T21:11:15.287309",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\calculator.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\calculator_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "404fc5fb-d442-42b4-b374-d9393a7ba09f",
+        "timestamp": "2026-02-28T21:11:16.894928",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "712741c4-34b9-4be2-ae6e-49a36bf41350",
+        "timestamp": "2026-02-28T21:11:18.545099",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\calculator_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\calculator_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6d81e3a3-2135-4b5e-8627-73f2f7595d21",
+        "timestamp": "2026-02-28T21:11:18.575967",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\calculator_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\calculator_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bcfe9f85-b14d-401d-bbae-f6e01d7eff65",
+        "timestamp": "2026-02-28T21:11:19.682722",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.01s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "6b36b0b8-5814-49f9-8eeb-2edbf23db65e",
+        "timestamp": "2026-02-28T21:11:21.353946",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d604b2cd-ffc7-4965-9972-0cfe9853fc44",
+        "timestamp": "2026-02-28T21:11:21.391471",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\data_processor.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\data_processor_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7efac83c-e7a7-440b-bf94-6f1de7156831",
+        "timestamp": "2026-02-28T21:11:22.602575",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "42fb737b-b7fa-44a9-9c26-4b8967c782c7",
+        "timestamp": "2026-02-28T21:11:24.700692",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\data_processor_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\data_processor_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "867ab2aa-0743-419e-af6a-ec2a4f19dc95",
+        "timestamp": "2026-02-28T21:11:24.745938",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\data_processor_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\data_processor_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f323557b-45f1-4dd9-b0c0-91e16cb9bcba",
+        "timestamp": "2026-02-28T21:11:25.895547",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "ff463b0d-9e19-4d06-9f4f-69e96fe8e209",
+        "timestamp": "2026-02-28T21:11:27.596337",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "be677b1b-3446-4dfb-af3d-72f189f235e0",
+        "timestamp": "2026-02-28T21:11:27.645445",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\file_handler.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\file_handler_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b39c9b7a-bae1-42e4-a769-ce6799482836",
+        "timestamp": "2026-02-28T21:11:28.825822",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "7d996619-d3b5-49cd-8c50-38b6e4a7c6f9",
+        "timestamp": "2026-02-28T21:11:47.624004",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\file_handler_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\file_handler_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "29cb5115-e357-4d69-a57a-692478507f43",
+        "timestamp": "2026-02-28T21:11:47.676093",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\file_handler_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\file_handler_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7658c8a6-28a7-450f-b810-fa48374fe238",
+        "timestamp": "2026-02-28T21:11:49.159258",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "ae8291a9-6f1b-45b1-8213-51d71c77783c",
+        "timestamp": "2026-02-28T21:11:51.173328",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b6efb2ef-075b-4607-a781-7840ac3b3cb0",
+        "timestamp": "2026-02-28T21:11:51.212221",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\network.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\network_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d57578ef-6e39-4f68-8963-9f6d80f0bf0f",
+        "timestamp": "2026-02-28T21:11:52.426695",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "c79cbb0d-101a-4112-9a70-8975a657b6bb",
+        "timestamp": "2026-02-28T21:11:54.652718",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\network_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\network_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "728cc4ee-a44e-46a1-b1b0-e2871ea5656e",
+        "timestamp": "2026-02-28T21:11:54.683186",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\network_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\network_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f02a5941-6fea-47c9-83f2-573c47ba39e9",
+        "timestamp": "2026-02-28T21:11:55.868470",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "61746dac-e006-4a50-9aa9-d4ee4169addb",
+        "timestamp": "2026-02-28T21:11:57.888434",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "50e20345-93e2-4cdb-a80b-0b10f29671c9",
+        "timestamp": "2026-02-28T21:11:57.942642",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\string_utils.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\string_utils_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4f1da400-8bc0-405f-abdb-28ecf4e8a618",
+        "timestamp": "2026-02-28T21:11:59.201619",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "cfd79dc9-97e3-4e50-bc2a-fd48cabe8728",
+        "timestamp": "2026-02-28T21:12:33.017933",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\string_utils_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\string_utils_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "014f10c1-b411-4a2a-ad7e-8f3e553d5de2",
+        "timestamp": "2026-02-28T21:12:33.048182",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\string_utils_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\string_utils_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7a2877db-1a6a-4bdc-9fd6-7819c1f5fb31",
+        "timestamp": "2026-02-28T21:12:34.301202",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.02s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "45924074-d80c-45e7-8112-36228a8c454f",
+        "timestamp": "2026-02-28T21:12:39.423049",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e25aee47-a294-4905-92b4-bc50d94be44d",
+        "timestamp": "2026-02-28T21:12:39.451616",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\test_error.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "be43f135-e1d2-4a26-83a8-ac0e88b9f778",
+        "timestamp": "2026-02-28T21:12:40.942647",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.04s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "66277996-e217-4579-925e-7dcd5e91c05e",
+        "timestamp": "2026-02-28T21:12:42.992100",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "daac2635-449d-4fa4-814a-a68774e8d997",
+        "timestamp": "2026-02-28T21:12:43.046169",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ac6f81f8-d60a-482c-a783-7b1e46e12518",
+        "timestamp": "2026-02-28T21:12:44.513411",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "77459881-5c26-43f2-bbf9-52e16708178f",
+        "timestamp": "2026-02-28T21:12:46.247448",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "128660fb-12fd-4d70-9385-f5e18e229b54",
+        "timestamp": "2026-02-28T21:12:46.300469",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_1.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3333bd67-0cad-43d5-92b4-93ad2654ae71",
+        "timestamp": "2026-02-28T21:12:47.577529",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 1,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
+    },
+    {
+        "id": "71cf3359-6c86-4877-8e99-c731a68f679f",
+        "timestamp": "2026-02-28T21:12:49.266545",
+        "agent": "Auditor",
+        "model": "gemini-1.5-flash",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze the file: sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_1.py",
+            "output_response": {
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_1.py",
+                "result": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "60e05b6a-f2c8-4528-ba86-cc08ff22e9e2",
+        "timestamp": "2026-02-28T21:12:49.310405",
+        "agent": "Fixer",
+        "model": "N/A",
+        "action": "FIX",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "file_path": "sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_1.py",
+                "auditor_output": {
+                    "issues": [
+                        "LLM Error: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+                    ],
+                    "decision": "REQUIRES_FIX"
+                }
+            },
+            "output_response": {
+                "fixed_file": "sandbox\\hidden_dataset\\test_error_fixed_iter_1_fixed_iter_1_fixed_iter_2.py",
+                "note": "Correction fictive appliquée"
+            }
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6b13de61-0899-4e1f-9d6a-966a0bbe4389",
+        "timestamp": "2026-02-28T21:12:50.567818",
+        "agent": "Judge",
+        "model": "N/A",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": {
+                "iteration": 2,
+                "target_dir": "./sandbox/hidden_dataset"
+            },
+            "output_response": {
+                "returncode": 5,
+                "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.5, pytest-7.4.4, pluggy-1.6.0\nrootdir: C:\\Refactoring-Swarm-Equipe-33\nplugins: anyio-4.12.1, langsmith-0.7.9\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+                "stderr": ""
+            }
+        },
+        "status": "FAIL"
     }
 ]

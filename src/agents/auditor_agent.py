@@ -1,14 +1,11 @@
 from pathlib import Path
 from src.utils.file_tools import read_file
 from src.utils.logger import log_experiment, ActionType
-
+from src.utils.llm_client import analyze_code_with_llm
 
 def run_auditor(file_path: str) -> dict:
     """
-    Auditor (Jour 7/8)
-    - Attend un CHEMIN DE FICHIER
-    - Décision : ACCEPTED / REQUIRES_FIX
-    - Logs conformes
+    Auditor avec Gemini API
     """
     p = Path(file_path)
 
@@ -19,7 +16,7 @@ def run_auditor(file_path: str) -> dict:
         }
         log_experiment(
             agent_name="Auditor",
-            model_used="N/A",
+            model_used="gemini-1.5-flash",
             action=ActionType.ANALYSIS,
             details={
                 "input_prompt": f"Analyze file (invalid path): {file_path}",
@@ -30,27 +27,18 @@ def run_auditor(file_path: str) -> dict:
         return result
 
     code = read_file(str(p))
-    stripped = code.strip()
-
-    # Règles fictives mais cohérentes pour les tests
-    if stripped == "":
-        issues = ["Empty file"]
-        decision = "REQUIRES_FIX"
-    elif "# FIXED" in code:
-        issues = []
-        decision = "ACCEPTED"
-    elif "ERROR" in code:
-        issues = ["Contains token ERROR"]
-        decision = "REQUIRES_FIX"
-    else:
-        issues = []
-        decision = "ACCEPTED"
-
-    result = {"issues": issues, "decision": decision}
+    
+    # UTILISER GEMINI API
+    result = analyze_code_with_llm(code, str(p))
+    
+    # FORCER REQUIRES_FIX si des issues sont trouvées
+    if result.get("issues") and len(result["issues"]) > 0:
+        if result["decision"] == "ACCEPTED":
+            result["decision"] = "REQUIRES_FIX"
 
     log_experiment(
         agent_name="Auditor",
-        model_used="N/A",
+        model_used="gemini-1.5-flash",
         action=ActionType.ANALYSIS,
         details={
             "input_prompt": f"Analyze the file: {str(p)}",
